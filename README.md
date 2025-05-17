@@ -75,6 +75,3 @@ Clone the project into local. Go into the project folder and click on index.html
 
 ![Logo](https://github.com/sumit-krk/name/blob/master/overstock/Capture_10.PNG?raw=true)
 
-## For more details :-
-
-- [Read our Blog](https://github.com/sumit-krk)
