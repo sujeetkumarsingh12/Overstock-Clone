@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://use.fontawesome.com/cc1e95bf29.js"></script>
+    <title>cart-product</title>
+    <style>
+        a{
+            text-decoration: none;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- top icon div -->
+    <div class="top_icon">
+        <div>Ships to:</div>
+        <div class="top_image"><a href=""><img src="https://ak1.ostkcdn.com/img/mxc/intFlag_IN.gif"></a></div>
+        <div>INDIA</div>
+    </div>
+
+    <!-- after top like:-search bar,Account,cart etc -->
+    <div id="stick_2">
+        <div class="overstock">
+            <div><a href="index.html">OVERSTOCK</a></div>
+            <div><input type="text" placeholder="Search your product" size="100">
+            <button><span><i class="fa fa-search"></i></span></button></div>
+            <div>
+                <div>
+                    <a href="signup_login.html">
+                        <div><i class="fa fa-user"></i></div>
+                       <div>Account</div>
+                    </a>
+                </div>
+                <div>
+                    <a href="">
+                        <div><i class="fa fa-list"></i></div>
+                        <div>Lists</div>
+                    </a>
+                </div>
+                <div>
+                    <a href="my_product_cart.html">
+                        <div><i class="fa fa-shopping-cart"></i></div>
+                        <div>Cart</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- menu bar /nav bar -->
+    
+        <div class="nav_bar">
+             <div>
+                <div><a href="">Furniture</a></div>
+                <div><a href="">Rugs</a></div>
+                <div><a href="">Decor</a></div>
+                <div><a href="">Bed & Bath</a></div>
+                <div><a href="">Home Improvement</a></div>
+                <div><a href="">Kitchen</a></div>
+                <div><a href="">Outdoor</a></div>
+                <div><a href="">Jewelry</a></div>
+                <div><a href="">Lighting</a></div>
+                <div><a href="">Kids & Baby</a></div>
+                <div><a href="">More</a></div>  
+            </div>
+    
+            <div>
+                <div><a href="">Ideas</a></div>
+                <div><a href="">Sales & Deals</a></div>
+            </div>
+        </div>
+    </div>
+    
+    <h1>Your cart item</h1>
+    <div id="cart_data">
+        <div id="our_product"></div>
+        <div id="product_information">
+            <div id="no_of_item">
+
+            </div>
+            <div id="total_price">
+                
+            </div>
+            <button><a href="check_out.html" style="color: white;">Check Out</a></button>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+
+    let cart_data=JSON.parse(localStorage.getItem("product_item"));
+
+    var main_div=document.getElementById("our_product");
+
+    total=0;
+    var id=1;
+    cart_data.forEach(function(Product){
+        console.log(Product);
+
+    let div=document.createElement("div");
+    div.setAttribute("id",`div${id}`);
+
+
+    let p_name=document.createElement("p");
+    p_name.innerHTML=Product.name;
+
+    let p_price=document.createElement("p");
+    p_price.innerHTML=Product.price;
+
+    let P_image=document.createElement("img");
+    P_image.src=Product.image;
+
+    let btn=document.createElement("button");
+    btn.innerHTML="Remove"
+    btn.setAttribute("id",`remove${id}`);
+    btn.setAttribute("onclick",`remove(Product)`);
+
+    div.append(P_image,p_name,p_price,btn);
+    main_div.append(div);
+
+    total=total+Number(Product.price);
+    id++;
+});
+
+
+function remove(p)
+    {
+        // var div=document.getElementById(`div${id}`);
+        // let cart_data=JSON.parse(localStorage.getItem("product_item"));
+        // console.log(cart_data.length);
+        // console.log(`div${id}`);
+        // div.remove();
+        // id--;
+        // document.getElementById("counts").textContent = id;
+        alert("function call");
+        console.log(p);
+    }
+
+
+    
+
+    var number_item=document.getElementById("no_of_item");
+    var total_price=document.getElementById("total_price");
+    number_item.innerHTML=`Total Item in Cart - ${cart_data.length}`;
+    total_price.innerHTML=`Total price of your cart is RS:-INR ${total}`;
+
+    localStorage.setItem("total_price",JSON.stringify(total));
+
+</script>

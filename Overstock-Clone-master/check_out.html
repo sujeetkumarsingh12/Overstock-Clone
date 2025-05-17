@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://use.fontawesome.com/cc1e95bf29.js"></script>
+    <title>Check-out</title>
+    
+</head>
+<body>
+
+    <div id="payment">
+        <!-- paymetn top part -->
+        <div id="payment_top">
+            <div><h1>overstock</h1></div>
+            <div><p>You are using our secure server</p></div>
+        </div>
+        <hr>
+
+        <!-- fedex payment proton -->
+        <div id="fedex">
+            <div><img src="https://ak1.ostkcdn.com/img/mxc/20170922_fedexLogo.png"></div>
+            <div>Secure checkout provided by FedEx International.
+                Your order total includes customs and taxes, if applicable.</div>
+        </div>
+
+        <!-- back to cart -->
+        <div><a href="my_product_cart.html">Back to cart</a></div>
+
+        <!-- Address -->
+        <div id="address">
+            <!-- Billing Address -->
+            <div>
+               <div id="main_address"> <h3>Billing Address</h3></div>
+
+               <div class="adds">
+                   <label>Email<span>*</span></label>
+                   <input type="text">
+               </div>
+
+               <div class="adds">
+                <label>First Name<span>*</span></label>
+                <input type="text">
+            </div>
+
+            <div class="adds">
+                <label>Last Name<span>*</span></label>
+                <input type="text">
+            </div>
+
+            <div class="adds">
+                <label>Company<span></span></label>
+                <input type="text">
+            </div>
+
+            <div class="adds">
+                <label>Tax ID<span></span></label>
+                <input type="text">
+            </div>
+
+            <div class="adds">
+                <label>Address Line 1<span>*</span></label>
+                <input type="text">
+            </div>
+
+            <div class="adds">
+                <label>Address Line 2<span></span></label>
+                <input type="text">
+            </div>
+
+            <div class="adds">
+                <label>Country<span>*</span></label>
+                <input type="text">
+            </div>
+
+            <div class="adds">
+                <label>City<span>*</span></label>
+                <input type="text">
+            </div>
+
+            <div class="adds">
+                <label>State<span></span></label>
+                <input type="text">
+            </div>
+
+            <div class="adds">
+                <label>zIP Code<span>*</span></label>
+                <input type="text">
+            </div>
+
+            <div class="adds">
+                <label>Phone #<span>*</span></label>
+                <input type="text">
+            </div>
+            </div>
+
+            <!-- Shipping Address -->
+            <div>
+                <div>
+                    <div id="main_address"> <h3>Shipping Address</h3></div>
+     
+                    <div class="adds">
+                        <label>Email<span>*</span></label>
+                        <input type="text">
+                    </div>
+     
+                    <div class="adds">
+                     <label>First Name<span>*</span></label>
+                     <input type="text">
+                 </div>
+     
+                 <div class="adds">
+                     <label>Last Name<span>*</span></label>
+                     <input type="text">
+                 </div>
+     
+                 <div class="adds">
+                     <label>Company<span></span></label>
+                     <input type="text">
+                 </div>
+     
+                 <div class="adds">
+                     <label>Tax ID<span></span></label>
+                     <input type="text">
+                 </div>
+     
+                 <div class="adds">
+                     <label>Address Line 1<span>*</span></label>
+                     <input type="text">
+                 </div>
+     
+                 <div class="adds">
+                     <label>Address Line 2<span></span></label>
+                     <input type="text">
+                 </div>
+     
+                 <div class="adds">
+                     <label>Country<span>*</span></label>
+                     <input type="text">
+                 </div>
+     
+                 <div class="adds">
+                     <label>City<span>*</span></label>
+                     <input type="text">
+                 </div>
+     
+                 <div class="adds">
+                     <label>State<span></span></label>
+                     <input type="text">
+                 </div>
+     
+                 <div class="adds">
+                     <label>zIP Code<span>*</span></label>
+                     <input type="text">
+                 </div>
+     
+                 <div class="adds">
+                     <label>Phone #<span>*</span></label>
+                     <input type="text">
+                 </div>
+                 </div>
+            </div>
+        </div>
+
+
+        <div id="fina_product_details">
+            <div id="total_items"></div>
+            <div id="total_price"></div>
+        </div>
+
+        <!-- card information -->
+        <div class="card_info">
+            <div>Payment Information</div>
+
+            <!-- paymrnt icon -->
+            <div id="p_icon">
+                <div><img src="https://ztransaction.bongous.com/static/css/images/pm/visa.png"></div>
+                <div><img src="https://ztransaction.bongous.com/static/css/images/pm/mastercard.png"></div>
+                <div><img src="https://ztransaction.bongous.com/static/css/images/pm/bitcoin.png"></div>
+            </div>
+            <div>
+                <div class="adds">
+                    <label>Card Type<span>*</span></label>
+                    <select name="" id="">
+                        <option value="">Select.....</option>
+                        <option value="">Visa</option>
+                        <option value="">mastercard</option>
+                        <option value="">Bitcoin</option>
+                        <option value="">Other</option>
+                    </select>
+                </div>
+
+                <div class="adds">
+                    <label>Credit Card Number<span>*</span></label>
+                    <input type="text">
+                </div>
+
+                <div class="adds">
+                    <label>Expiration Date<span>*</span></label>
+                    <div>
+                        <select name="" id="">
+                            <option value="">01</option>
+                            <option value="">02</option>
+                            <option value="">03</option>
+                            <option value="">04</option>
+                            <option value="">05</option>
+                            <option value="">06</option>
+                            <option value="">07</option>
+                            <option value="">08</option>
+                            <option value="">09</option>
+                            <option value="">10</option>
+                            <option value="">11</option>
+                            <option value="">12</option>
+                        </select>
+                        <select name="" id="">
+                            <option value="">2021</option>
+                            <option value="">2022</option>
+                            <option value="">2023</option>
+                            <option value="">2024</option>
+                            <option value="">2025</option>
+                            <option value="">2026</option>
+                            <option value="">2027</option>
+                            <option value="">2028</option>
+                            <option value="">2029</option>
+                            <option value="">2030</option>
+                            <option value="">2031</option>
+                            <option value="">2032</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="adds">
+                    <label>Security Code<span>*</span></label>
+                    <input type="text">
+                </div>
+            </div>
+        </div>
+        <a href="payment.html">
+            <button>PLACE ORDER >></button>
+        </a>
+    </div>
+
+</body>
+</html>
+<script>
+    let total_price=JSON.parse(localStorage.getItem("total_price"));
+    let total_item=JSON.parse(localStorage.getItem("product_item"));
+    
+    var items=document.getElementById("total_items");
+    items.innerHTML=`<h1>Total Item In Cart - ${total_item.length}</h1>`;
+
+    var price=document.getElementById("total_price");
+    price.innerHTML=`<h1>Total Cart Value - INR ${total_price}</h1>`;
+</script>
