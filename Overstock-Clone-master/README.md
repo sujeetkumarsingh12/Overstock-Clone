@@ -26,7 +26,7 @@ https://overstock.vercel.app/
 - Cart Section: User can click on cart and see cart item if user click on Check out then redirect on payment page.
 - After filling on payment details then user click on palce order.
 ## Developed By :-
-- [Sumit Kumar](https://github.com/sumit-krk)
+- Sujeet Kumar Singh https://github.com/sujeetkumarsingh12/Overstock-Clone
 
 
 
